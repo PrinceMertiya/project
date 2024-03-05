@@ -1,0 +1,23 @@
+<!-- user_nodue_form.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h2>Nodue Request Form</h2>
+    <form method="post">
+      {{ form.hidden_tag() }}
+      <div class="form-group">
+        <label for="college_name">College Name</label>
+        <input type="text" class="form-control" id="college_name" value="{{ user.college_name }}" readonly>
+      </div>
+      <div class="form-group">
+        <label for="branch_name">Branch Name</label>
+        <input type="text" class="form-control" id="branch_name" value="{{ user.branch_name }}" readonly>
+      </div>
+      <!-- Add other form fields here if needed -->
+
+      <button type="submit" class="btn btn-primary">Submit Request</button>
+    </form>
+  </div>
+{% endblock %}

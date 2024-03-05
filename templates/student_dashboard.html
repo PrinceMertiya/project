@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- Add your CSS styles or link external stylesheets here -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        section {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            width: 60%;
+            margin-top: 50px;
+            text-align: center;
+            margin-left: 250px ;
+        }
+
+        h2 {
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        
+
+        
+
+
+        .navbar {
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            background-color: #007bff;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="logo">Logo</a>
+        
+        <ul class="nav-links">
+            <li><a href="#">User</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <section>
+        <h2>Hello, {{user.username}}</h2>
+        <p>Your College: {{user.college_name}}</p>
+        <p>Your Branch: {{user.branch_name}}</p>
+        <!-- Add more information as needed -->
+
+        <!-- Example: Displaying Nodue Requests -->
+        <h3>Your Nodue Requests</h3>
+        <ul>
+            <li>Nodue Request 1</li>
+            <li>Nodue Request 2</li>
+            <!-- Add dynamic content based on the student's data -->
+        </ul>
+    </section>
+
+    <!-- Add more sections or content as needed -->
+
+    <footer>
+        <p>&copy; 2024 Your College. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- admin_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Form - Your App</title>
+    <!-- Add any additional CSS styles or links to external stylesheets here -->
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+        
+        align-items: center; 
+        justify-content: left;
+    }
+      h2 {
+        text-align: center;
+        color: #343a40;
+        margin-bottom: 30px;
+    }
+
+    label {
+        margin-bottom: 8px;
+    }
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    section {
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        border-radius: 8px;
+        width: 60%;
+        margin-top: 50px;
+        text-align: center;
+        margin-left: 250px;
+    }
+    input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ced4da;
+        border-radius: 12px;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Admin Form</h1>
+    </header>
+
+    <section>
+        <h2>Add Staff and Faculty Names</h2>
+        <form action="/add_faculty_staff" method="post">
+            <label for="faculty_name">Faculty Name:</label>
+            <input type="text" id="faculty_name" name="faculty_name" required>
+            <br>
+            <label for="staff_name">Staff Name:</label>
+            <input type="text" id="staff_name" name="staff_name" required>
+            <br>
+            <button type="submit">Add Faculty and Staff</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your App</p>
+    </footer>
+
+    <!-- Add any additional scripts or links to external scripts here -->
+</body>
+
+</html>
