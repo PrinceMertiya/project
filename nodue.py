@@ -53,6 +53,15 @@ class LoginForm(FlaskForm):
 def index():
     return render_template('index.html')
 
+@app.route('/index/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/index/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @app.route('/user_nodue_form', methods=['GET', 'POST'])
 @login_required
 def user_nodue_form():
